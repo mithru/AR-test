@@ -1,11 +1,11 @@
-<html>  
+<html>
 	<head>
-		<title> SceneViewer </title>   
-		<meta charset="utf-8">  
+		<title> SceneViewer </title>
+		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="demo-styles.css">
-      
+
 	<!-- The following libraries and polyfills are recommended to maximize browser support -->
 	<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
 	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
@@ -15,53 +15,58 @@
 
 	<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
 	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
- 
+
 	<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
 	<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
-	
+
 	<!-- Import the component -->
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-	</head> 
+	<script>
+		function doThis(){
+			window.open("https://www.barringtongifts.com/catalog/product/view/id/3593/s/bb726-265-1525850283/",'_blank');
+		}
+	</script>
+	</head>
 	<body>
-	<div class="card">  
-	<model-viewer 
-		ar 
-		alt="Breakfast Wrap"	
+	<div class="card">
+	<model-viewer
+		ar
+		alt="Breakfast Wrap"
 		src="bfast-wrap.glb"
-	      	ios-src="medwh_wrap_v6.usdz"
-		background-color="#F4F4F4" 
+  	ios-src="medwh_wrap_v6.usdz"
+		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
 		stage-light-intensity="1"
 		exposure="1"
 		camera-controls
 		interaction-prompt="auto"
 		      >
-	</model-viewer> 
+	</model-viewer>
 	</div>
 
-	<div class="card">  
-	<model-viewer 
-		ar 
-		alt="Furniture"	
+	<div class="card">
+	<model-viewer
+		ar
+		alt="Furniture"
 		src="furniture_yellow.glb"
-	      	ios-src="furniture-yellow.usdz"
-		background-color="#F4F4F4" 
+  	ios-src="furniture-yellow.usdz"
+		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
 		stage-light-intensity="1"
 		exposure="1"
 		camera-controls
 		interaction-prompt="auto"
 		      >
-	</model-viewer> 
+	</model-viewer>
 	</div>
-	
+
 	<div class="card">
 	<model-viewer
 		ar
 		alt="Timberland Boot"
 		src="Timberland_GLB.glb"
-	  	ios-src="timberland-v1.usdz"
+		ios-src="timberland-v1.usdz"
 		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
 		stage-light-intensity="1"
@@ -70,14 +75,14 @@
 		interaction-prompt="auto"
 		      >
 	</model-viewer>
-	</div> 
-	 
+	</div>
+
 	<div class="card">
 	<model-viewer
 		ar
 		alt="Hand-made Scarf"
 		src="KoreanHandmade_GLB.glb"
-	  	ios-src="koreanhandmade-v3.usdz"
+  	ios-src="koreanhandmade-v3.usdz"
 		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
 		stage-light-intensity="1"
@@ -86,14 +91,14 @@
 		interaction-prompt="auto"
 		      >
 	</model-viewer>
-	</div> 
-	 
+	</div>
+
 	<div class="card">
 	<model-viewer
 		ar
 		alt="Barrington Bag"
 		src="bag_gltf_50cm.glb"
-	  	ios-src="bag_obj_50cm.usdz"
+  	ios-src="bag_obj_50cm.usdz"
 		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
 		stage-light-intensity="1"
@@ -101,15 +106,17 @@
 		camera-controls
 		interaction-prompt="auto"
 		      >
+
+		<button class="slide selected" onclick="doThis()"> </button>
 	</model-viewer>
-	</div> 
+	</div>
 	<!--
 	<div class="card">
 	<model-viewer
 		ar
 		autoplay
 		alt="Pizza Animation"
-		src="Chf.glb"	
+		src="Chf.glb"
 		ios-src="NestlePizza_Box_Dough_F010.usdz"
 		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
@@ -119,12 +126,12 @@
 		interaction-prompt="auto"
 		      >
 	</model-viewer>
-	</div> 
-	
+	</div>
+
 	<div class="card">
 	<model-viewer
 		ar
-		alt="Reality File Test"	
+		alt="Reality File Test"
 	  	ios-src="test-laptop.reality"
 		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
@@ -134,8 +141,7 @@
 		interaction-prompt="auto"
 		      >
 	</model-viewer>
-	</div> 		
+	</div>
 	-->
 	</body>
 </html>
-

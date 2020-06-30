@@ -32,8 +32,9 @@
 		}
 
 		// handle ios part
-		const linkElement = document.getElementById("ar-button");
-		linkElement.addEventListener("message", function (event) {
+		const linkElement = document.getElementById("mv").shadowroot;
+		console.log(linkElement);
+		linkElement.getElementById(ar-button).addEventListener("message", function (event) {
 			if (event.data == "_apple_ar_quicklook_button_tapped") {
 					// handle the user tap.
 					doThis();

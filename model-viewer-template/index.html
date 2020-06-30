@@ -1,4 +1,5 @@
-<!-- v0.1.7 -->
+<!-- v0.1.8 -->
+
 <html>
 	<head>
 		<title> SceneViewer </title>
@@ -33,7 +34,7 @@
 
 		// handle ios part
 		document.addEventListener("DOMContentLoaded", function(){
-			const linkElement = document.getElementById('mv');
+			const linkElement = document.getElementById('mv').shadowRoot;
 			console.log(linkElement);
 			linkElement.getElementById('ar-button').addEventListener("message", function (event) {
 				if (event.data == "_apple_ar_quicklook_button_tapped") {

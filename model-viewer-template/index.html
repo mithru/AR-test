@@ -1,4 +1,5 @@
-<!-- v 0.1.0 -->
+<!-- v0.1.1 -->
+
 <html>
 	<head>
 		<title> SceneViewer </title>
@@ -24,14 +25,27 @@
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
 	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 	<script>
+
+		// action to perform when the user clicks the custom button
 		function doThis(){
 			window.open("https://www.barringtongifts.com/catalog/product/view/id/3593/s/bb726-265-1525850283/",'_blank');
 		}
+
+		//handle ios part
+		const linkElement = document.getElementById("mv");
+		linkElement.addEventListener("message", function (event) {
+			if (event.data == "_apple_ar_quicklook_button_tapped") {
+					// handle the user tap.
+					doThis();
+			}
+		}, false);
+
 	</script>
 	</head>
 	<body>
 	<div class="card">
 	<model-viewer
+		id="mv"
 		ar
 		alt="Breakfast Wrap"
 		src="bfast-wrap.glb"
@@ -99,7 +113,7 @@
 		ar
 		alt="Barrington Bag"
 		src="bag_gltf_50cm.glb"
-  	ios-src="bag_obj_50cm.usdz#custom=https://mithru.github.io/AR-test/model-viewer-template/button-for-quicklook.html&customHeight=large"
+  	ios-src="bag_obj_50cm.usdz#custom=button-for-quicklook.html&customHeight=large"
 		background-color="#F4F4F4"
 		environment-image="env/BLUR.hdr"
 		stage-light-intensity="1"

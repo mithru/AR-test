@@ -106,11 +106,15 @@
 		camera-controls
 		interaction-prompt="auto"
 		      >
-		<div class="slider">
-	    <div class="slides">
-				<button class="slide selected" onclick="doThis()"> Buy this for $160</button>
-			</div>
-		</div>
+
+		<button slot="ar-button" id="ar-button">
+			View in your space
+		</button>
+		<!-- <div class="slider">
+	    <div class="slides"> -->
+		<button class="slide" id="buy-button" onclick="doThis()"> Buy</button>
+			<!-- </div>
+		</div> -->
 	</model-viewer>
 	</div>
 	<!--

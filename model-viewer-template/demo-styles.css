@@ -5,36 +5,48 @@ body {
   color: #244376;
 }
 
-.slider {
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+  #ar-button{
+    background-image: url(imgs/ar-button.png);
     position: absolute;
-    bottom: 16px;
+    left: 10%;
+    transform: translateX(-10%);
+    bottom: 30px;
   }
 
-  .slides {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+  #buy-button{
+    background-image: url(imgs/buy-button.png);
+    position: absolute;
+    left: 90%;
+    transform: translateX(-90%);
+    bottom: 30px;
   }
 
-  .slide {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 100px;
-    height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
-    margin-right: 10px;
-    border-radius: 10px;
-    border: none;
-    display: flex;
-  }
+  button {
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: 12px 50%;
+      background-color: #fff;
+      padding: 0px 16px 0px 40px;
+      font-family: Roboto Regular, Helvetica Neue, sans-serif;
+      font-size: 14px;
+      color:#4285f4;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 18px;
+      border: 1px solid #DADCE0;
+    }
+
+    button:active {
+      background-color: #E8EAED;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:focus-visible {
+      outline: 1px solid #4285f4;
+    }
 
 .card {
   margin: 3em auto;
@@ -48,7 +60,7 @@ body {
 
 model-viewer {
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 .attribution {

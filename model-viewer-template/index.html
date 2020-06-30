@@ -1,4 +1,5 @@
 <!-- v0.1.6 -->
+
 <html>
 	<head>
 		<title> SceneViewer </title>
@@ -30,15 +31,19 @@
 			window.open("https://www.barringtongifts.com/catalog/product/view/id/3593/s/bb726-265-1525850283/",'_blank');
 		}
 
+
 		// handle ios part
-		const linkElement = document.getElementById('mv');
-		console.log(linkElement);
-		linkElement.getElementById('ar-button').addEventListener("message", function (event) {
-			if (event.data == "_apple_ar_quicklook_button_tapped") {
-					// handle the user tap.
-					doThis();
-			}
-		}, false);
+		document.addEventListener("DOMContentLoaded", function(){
+			const linkElement = document.getElementById('mv');
+			console.log(linkElement);
+			linkElement.getElementById('ar-button').addEventListener("message", function (event) {
+				if (event.data == "_apple_ar_quicklook_button_tapped") {
+						// handle the user tap.
+						doThis();
+				}
+			}, false);
+		});
+
 
 	</script>
 	</head>
